@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gabriel Farrell | The Worth of Scars</title>
+<meta name="description" content="The Worth of Scars, book one of the Scarred Saga: a flintlock fantasy with a dark twist by Gabriel Farrell, out now.">
+<meta property="og:title" content="A homepage for Gabriel Farrell, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Gabriel Farrell and The Worth of Scars, made by Sparsh Saini. Not the official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/gabrielfarrell/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238e1b37'/><path d='M7 22 25 8M9 26 26 14M6 16 20 6' stroke='%23e9d58c' stroke-width='2' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Colours from The Worth of Scars cover: the crimson ground, the hood's burnt brown,
+   the pale gold of the title and the brighter gold of the scratch-marks. */
+:root {
+  --crimson: #8e1b37;
+  --blood: #5c0f22;
+  --hood: #22150b;
+  --umber: #3b2614;
+  --gold: #e9d58c;
+  --spark: #f2c14e;
+  --page: #f3ead6;
+  --page-2: #cdbf9f;
+  --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
+  --text: "IM Fell English", Georgia, serif;
+  --gutter: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--hood); color: var(--page); font-family: var(--text); font-size: 1.28rem; line-height: 1.5; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1; }
+p { margin: 0 0 1rem; }
+:focus-visible { outline: 2px solid var(--spark); outline-offset: 3px; }
+/* Buttons set in the cover's small caps: a pale gold slab, square, like the title's ink */
+.btn { display: inline-block; padding: .55rem 1.25rem .62rem; background: var(--gold); color: var(--hood); font-family: var(--display); font-size: 1.2rem; text-decoration: none; box-shadow: 0 .4rem 1.2rem rgba(20, 8, 4, .4); }
+.btn:hover, .btn:focus-visible { background: var(--page); }
+.quiet { font-style: italic; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+.quiet:hover, .quiet:focus-visible { color: var(--spark); }
+.buy { display: flex; flex-wrap: wrap; gap: .9rem 1.4rem; align-items: center; }
+
+.top { position: absolute; z-index: 20; top: 0; left: 0; right: 0; }
+.made { margin: 0; padding: .45rem var(--gutter); background: #170c06; color: var(--page-2); font-size: 1.02rem; line-height: 1.35; text-align: center; }
+.bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .7rem var(--gutter); }
+.mark { font-family: var(--display); font-size: 1.45rem; letter-spacing: .12em; text-decoration: none; color: var(--page); }
+.bar nav { display: flex; gap: 1.3rem; font-style: italic; }
+.bar nav a { text-decoration: none; }
+.bar nav a:hover, .bar nav a:focus-visible { color: var(--gold); }
+
+/* Hero: the cover taken apart. Crimson ground, the hooded man with his gold scratch-marks lifted
+   off, and the marks themselves in five bands. Scroll and the scars sweep in from the right like
+   the gust on the cover and settle across him, band by band, while he leans in. The title is set
+   in HTML where the cover sets it. */
+.hero { position: relative; height: 100svh; min-height: 38rem; }
+.js .hero { height: 340svh; }
+.stage { position: sticky; top: 0; height: 100svh; min-height: 38rem; overflow: hidden; background: var(--crimson); }
+.ground { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+.scene { position: absolute; left: 0; top: 0; container-type: inline-size; overflow: hidden; }
+.scene img { position: absolute; max-width: none; will-change: transform, opacity; }
+.scene .figure { left: 0; top: 0; width: 100%; height: 100%; transform-origin: 50% 30%; }
+.scar { opacity: 0; filter: brightness(1.12) saturate(1.1); }
+.s0 { left: 78.35%; top: 19.78%; width: 21.65%; height: 80.15%; }
+.s1 { left: 60.99%; top: 8.46%; width: 23.49%; height: 91.54%; }
+.s2 { left: 45.8%; top: 1.19%; width: 21.32%; height: 98.81%; }
+.s3 { left: 30.71%; top: 1.27%; width: 21.22%; height: 98.73%; }
+.s4 { left: 0; top: 7.88%; width: 36.73%; height: 91.68%; }
+.scene .fade { position: absolute; top: 0; bottom: 0; right: -1px; width: 12%; background: linear-gradient(90deg, rgba(142, 27, 55, 0), var(--crimson) 92%); }
+/* the title, where the cover puts it */
+.title { position: absolute; inset: 0; color: var(--gold); pointer-events: none; }
+.title span { position: absolute; line-height: 1; text-transform: uppercase; text-shadow: 0 .02em .06em rgba(20, 8, 4, .55); }
+.title .the { left: 18%; top: 37.9%; font-family: var(--text); font-style: italic; font-size: 9.6cqw; text-transform: none; }
+.title .worth { left: 16%; top: 45.2%; font-size: 17.9cqw; letter-spacing: -.01em; }
+.title .of { left: 10.8%; top: 60.4%; font-family: var(--text); font-style: italic; font-size: 9.6cqw; text-transform: none; }
+.title .scars { left: 30.2%; top: 60.6%; font-size: 17.9cqw; letter-spacing: -.01em; }
+.copy { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 6svh; }
+.copy p { margin: 0; }
+.ask { position: absolute; left: 0; right: 0; bottom: 0; font-style: italic; font-size: clamp(1.35rem, 2vw, 1.7rem); line-height: 1.3; text-shadow: 0 1px 12px rgba(20, 8, 4, .95); will-change: transform, opacity; text-wrap: balance; }
+.end { opacity: 0; will-change: transform, opacity; }
+.end .sub { font-family: var(--display); font-size: 1.3rem; color: var(--gold); margin-bottom: .5rem; }
+.end .when { font-style: italic; margin: .2rem 0 1.1rem; text-shadow: 0 1px 10px rgba(20, 8, 4, .9); }
+@media (min-width: 761px) {
+  .copy { left: auto; width: min(26rem, 34vw); bottom: auto; top: 50%; transform: translateY(-30%); }
+  .ask { position: static; margin-bottom: -3.4em; }
+}
+html:not(.js) .ask { display: none; }
+html:not(.js) .end, html:not(.js) .scar { opacity: 1; }
+
+/* Calm sections */
+.band { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+h2 { font-size: clamp(2.3rem, 4.6vw, 3.7rem); margin-bottom: 1.3rem; color: var(--gold); text-wrap: balance; }
+.book { background: var(--umber); }
+.book .grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+.book .cover-s { box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .5); position: sticky; top: 2rem; }
+.blurb { max-width: 38rem; }
+.blurb .q { font-size: clamp(1.5rem, 2.4vw, 1.9rem); line-height: 1.3; font-style: italic; color: var(--gold); margin: 1.4rem 0; }
+.word { margin: 1.8rem 0 2rem; padding: 1rem 0; border-top: 1px solid rgba(233, 213, 140, .35); border-bottom: 1px solid rgba(233, 213, 140, .35); }
+.word p { margin: 0; color: var(--page-2); }
+.word b { font-family: var(--display); font-weight: 400; color: var(--page); font-size: 1.35rem; }
+
+.fairs { background: var(--crimson); }
+.fairs h2 { color: var(--page); }
+.fairs .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.fair { padding: 1.4rem 0 1.6rem; border-top: 2px solid var(--gold); }
+.fair .date { font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); color: var(--gold); line-height: 1; }
+.fair h3 { font-size: 1.6rem; margin: .5rem 0 .6rem; }
+.fair.past { opacity: .8; }
+.fairs .lead-in { font-size: clamp(1.35rem, 2vw, 1.6rem); line-height: 1.4; }
+
+.about { background: var(--hood); }
+.about .grid { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.about img { filter: sepia(.25); box-shadow: 0 1.2rem 2.6rem rgba(0, 0, 0, .5); }
+.where { list-style: none; padding: 0; margin: 1.6rem 0 0; border-top: 1px solid rgba(233, 213, 140, .35); }
+.where li { border-bottom: 1px solid rgba(233, 213, 140, .35); }
+.where a { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: .9rem 0; text-decoration: none; }
+.where a span { color: var(--page-2); font-style: italic; text-align: right; }
+.where a:hover, .where a:focus-visible { color: var(--gold); }
+
+footer { padding: 2.2rem 0 2.6rem; background: #170c06; color: var(--page-2); font-size: 1.05rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .8rem 2rem; justify-content: space-between; }
+footer p { margin: 0; }
+
+@media (max-width: 760px) {
+  body { font-size: 1.2rem; }
+  .mark { font-size: 1.15rem; letter-spacing: .08em; }
+  .bar nav { gap: 1rem; }
+  .bar nav .wide { display: none; }
+  .copy { text-align: left; }
+  .book .grid, .fairs .grid, .about .grid { grid-template-columns: minmax(0, 1fr); }
+  .book .cover-s { position: static; max-width: 15rem; }
+  .about img { max-width: 12rem; }
+}
+</style>
+</head>
+<body>
+<div class="top">
+  <p class="made">A homepage idea made by Sparsh Saini for Gabriel Farrell. Not their official site.</p>
+  <div class="bar">
+    <a class="mark" href="#">Gabriel Farrell</a>
+    <nav aria-label="Main">
+      <a href="#book">The book</a>
+      <a href="#fairs">Signed copies</a>
+      <a class="wide" href="#about">About</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+<section class="hero" aria-label="The Worth of Scars">
+  <div class="stage">
+    <img class="ground" src="img/crimson.jpg" alt="" width="1000" height="1500">
+    <div class="scene">
+      <img class="figure" src="img/figure.webp" alt="The Worth of Scars cover: a hooded figure drawn in scratched brown and gold on crimson, a flintlock pistol in his hand" width="1143" height="1714" fetchpriority="high">
+      <img class="scar s4" src="img/scar-4.webp" alt="" width="420" height="1572">
+      <img class="scar s3" src="img/scar-3.webp" alt="" width="242" height="1693">
+      <img class="scar s2" src="img/scar-2.webp" alt="" width="244" height="1694">
+      <img class="scar s1" src="img/scar-1.webp" alt="" width="268" height="1569">
+      <img class="scar s0" src="img/scar-0.webp" alt="" width="247" height="1374">
+      <div class="title" aria-hidden="true"><span class="the">The</span><span class="worth">Worth</span><span class="of">of</span><span class="scars">Scars</span></div>
+      <div class="fade"></div>
+    </div>
+    <div class="copy">
+      <p class="ask">Is saving the world worth becoming one of the shunned, self-mutilating sorcerers known as the Scarred?</p>
+      <div class="end">
+        <h1 class="sub">The Worth of Scars</h1>
+        <p class="when">Book one of the Scarred Saga. Out now in hardback, paperback and ebook.</p>
+        <div class="buy">
+          <a class="btn" href="https://books2read.com/worthofscars">Buy the book</a>
+          <a class="quiet" href="https://BookHip.com/SQGBFHA">Read six chapters free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band book" id="book">
+  <div class="wrap grid">
+    <img class="cover-s" src="img/cover.jpg" alt="The Worth of Scars by Gabriel Farrell, book one of the Scarred Saga" width="600" height="900" loading="lazy">
+    <div class="blurb">
+      <h2>The Worth of Scars</h2>
+      <p>An epic flintlock adventure with a twist, The Worth of Scars follows a collection of tragic misfits on a journey to destroy humanity’s ancient enemy, the Serafin.</p>
+      <p>Yet only those with the powers the Serafin once gifted humanity can defeat them, a gift that was long ago tainted.</p>
+      <p class="q">Each must decide: is saving the world worth becoming one of the Scarred?</p>
+      <p>For fans of Joe Abercrombie, Brian McClellan and George R.R. Martin. Dark, very much not for everyone, and over twice the length a debut is meant to be.</p>
+      <div class="word">
+        <p><b>4.4 on Goodreads</b> from the first twelve reviews, featured in Grimdark Magazine and on Fanfiaddict, and number seven in IngramSpark’s fantasy rankings in its first fortnight.</p>
+      </div>
+      <div class="buy">
+        <a class="btn" href="https://books2read.com/worthofscars">Every store</a>
+        <a class="quiet" href="https://BookHip.com/SQGBFHA">The first six chapters, free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band fairs" id="fairs">
+  <div class="wrap">
+    <h2>Signed copies, in person</h2>
+    <div class="grid">
+      <div class="fair">
+        <p class="date">Sun 22 Nov</p>
+        <h3>Oxford Indie Book Fair</h3>
+        <p>The Oxford University Exam Schools, High Street. Free and open to everyone. Signed copies of The Worth of Scars, and do say hi even if you don’t fancy buying one.</p>
+      </div>
+      <div class="fair past">
+        <p class="date">24 and 25 Oct</p>
+        <h3>BristolCon</h3>
+        <p>Signed, personalised copies in the dealers’ room, a reading from the book, and a panel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band about" id="about">
+  <div class="wrap grid">
+    <img src="img/gabriel.jpg" alt="Gabriel Farrell" width="500" height="565" loading="lazy">
+    <div>
+      <h2>Gabriel Farrell</h2>
+      <p>I live in Oxford, walking those hallowed streets in the footsteps of fantasy legends I one day hope to emulate. I grew up in rural Wiltshire, studied Film and Writing, and read and consulted on screenplays for the likes of BAFTA, Netflix and the BBC.</p>
+      <p>Then came COVID, and a year of kitchen-table arguments made gritty drama a lot less appealing. I went back to Tolkien, Martin and Pullman, found Jordan, Abercrombie, Hobb and Sanderson, and started the book.</p>
+      <p>I also cook. Much of The Worth of Scars was dreamt up while simmering sauces, peeling vegetables or searing meats, which may explain the grimness of its magic system.</p>
+      <ul class="where">
+        <li><a href="https://gfarrellwriter.kit.com/newsletter">Newsletter <span>progress and sneak peeks</span></a></li>
+        <li><a href="https://www.instagram.com/gfarrellauthor/">Instagram <span>@gfarrellauthor</span></a></li>
+        <li><a href="https://bsky.app/profile/gfarrellauthor.bsky.social">Bluesky <span>@gfarrellauthor</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A mockup made by Sparsh Saini for Gabriel Farrell. Not affiliated, not live. The cover and words are the author’s.</p>
+    <p><a class="quiet" href="#">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const hero = document.querySelector('.hero'), stage = hero.querySelector('.stage');
+  const scene = hero.querySelector('.scene'), ground = hero.querySelector('.ground'), figure = scene.querySelector('.figure');
+  const scars = [0, 1, 2, 3, 4].map(i => scene.querySelector('.s' + i));
+  const ask = hero.querySelector('.ask'), end = hero.querySelector('.end');
+  const CW = 1843, CH = 2765;
+  const clamp = v => Math.min(1, Math.max(0, v));
+  const ease = t => t * t * (3 - 2 * t);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let laid = false;
+  const layout = () => {
+    const w = stage.clientWidth, h = stage.clientHeight, phone = w <= 760;
+    // wide: the cover fills the left of the screen, cropped at the waist, and the crimson ground
+    // runs on behind the words
+    // phones fit the title's width (the crimson ground carries on above the hood, as on the cover)
+    const s = phone ? Math.min(w * .95 / 1440, h / CH * 1.1) : Math.max(w * .6 / CW, h * 1.02 / CH);
+    const left = phone ? w / 2 - 920 * s : 0, top = phone ? h - CH * s * 1.0 : Math.min(0, h * .5 - 1250 * s);
+    Object.assign(scene.style, { width: CW * s + 'px', height: CH * s + 'px', left: left + 'px', top: top + 'px' });
+    scene.querySelector('.fade').style.display = phone ? 'none' : '';
+    laid = true;
+  };
+  const render = p => {
+    if (!laid) layout();
+    // the gust of scars: right band first, sweeping left across his face and down the coat
+    scars.forEach((el, i) => {
+      const t = ease(clamp((p - (.08 + i * .1)) / .16));
+      el.style.opacity = t.toFixed(3);
+      el.style.transform = `translate(${((1 - t) * 70).toFixed(2)}%,${((1 - t) * -4).toFixed(2)}%)`;
+    });
+    const lean = ease(clamp(p / .8));
+    figure.style.transform = `translateY(${(-lean * 1.5).toFixed(2)}%) scale(${(1 + .05 * lean).toFixed(4)})`;
+    ground.style.transform = `scale(${(1.06 - .06 * lean).toFixed(4)})`;
+    const a = ease(clamp((p - .5) / .12)); ask.style.opacity = (1 - a).toFixed(3); ask.style.transform = `translateY(${(-a * 1).toFixed(2)}rem)`;
+    const c = ease(clamp((p - .66) / .2)); end.style.opacity = c.toFixed(3); end.style.transform = `translateY(${((1 - c) * 1.2).toFixed(2)}rem)`;
+  };
+  if (reduced) {
+    document.documentElement.classList.remove('js');
+    const fin = () => { laid = false; render(1); };
+    fin(); addEventListener('resize', fin);
+    return;
+  }
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const run = hero.offsetHeight - innerHeight;
+    render(run > 0 ? clamp(-hero.getBoundingClientRect().top / run) : 1);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', () => { laid = false; update(); });
+  update();
+})();
+</script>
+</body>
+</html>
